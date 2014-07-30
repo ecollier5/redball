@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Redball Zero One</title>
+				<script>
+				function sayhello()
+				{
+					alert("Hi Eric");
+				}
+				function moveleft()
+				{
+					redball.left=redball.left-30;
+				}
+				function moveright()
+				{
+					redball.left=redball.left+30;
+				}
+				function moveup()
+				{
+					redball.top=redball.top-30;
+				}
+				function movedown()
+				{
+					redball.top=redball.top+30;
+				}
+				function movediagdownright()
+				{
+					redball.top=redball.top+30;
+						redball.left=redball.left+30;
+				}
+				function movediagdownleft()
+				{
+					redball.top=redball.top+30;
+						redball.left=redball.left-30;
+				}
+				function movediagupleft()
+				{
+					redball.top=redball.top-30;
+						redball.left=redball.left-30;
+				}
+				function movediagupright()
+				{
+					redball.top=redball.top-30;
+						redball.left=redball.left+30;
+				}
+				function square()
+				{
+				for (i = 0; i < 10; i++) {
+					redball.left=redball.left-30; + "<br>";
+					}
+				for (i = 0; i < 10; i++) {
+					redball.top=redball.top+30; + "<br>";
+					}
+				for (i = 0; i < 10; i++) {
+					redball.left=redball.left+30; + "<br>";
+					}
+				for (i = 0; i < 10; i++) {
+					redball.top=redball.top-30; + "<br>";
+					}
+				
+						
+					
+				}
+				function triangle ()
+				{
+				for (i = 0; i < 6; i++) {
+				redball.top=redball.top+30;
+						redball.left=redball.left+30; + "<br>";
+				}
+				for (i = 0; i < 8; i++) {
+				redball.left=redball.left-30; + "<br>";
+				}
+				for (i = 0; i < 6; i++) {
+				redball.top=redball.top-30;
+						redball.left=redball.left+30; + "<br>";
+				}
+				
+				
+				
+				}		
+				function bounce ()
+				{
+				for (i = 0; i < 7; i++) {
+				redball.top=redball.top+95;
+						redball.left=redball.left+95; + "<br>";
+				}
+				for (i = 0; i < 9; i++) {
+				redball.top=redball.top-95;
+						redball.left=redball.left+95; + "<br>";
+				}
+				for (i = 0; i < 3; i++) {
+				redball.top=redball.top+95;
+						redball.left=redball.left+95; + "<br>";
+				}
+				for (i = 0; i < 18; i++) {
+				redball.left=redball.left-95; + "<br>";
+				}
+				
+				}
+				function octagon ()
+				{
+				for (i = 0; i < 10; i++) {
+				redball.left=redball.left+30; + "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+				redball.top=redball.top+30;
+						redball.left=redball.left+30; + "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+				redball.top=redball.top+40; + "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+				redball.top=redball.top+30;
+					redball.left=redball.left-30; + "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+					redball.left=redball.left-30;+ "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+				redball.top=redball.top-30;
+					redball.left=redball.left-30; + "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+					redball.top=redball.top-40;+ "<br>";
+				}
+				for (i = 0; i < 10; i++) {
+				redball.top=redball.top-30;
+					redball.left=redball.left+30;+ "<br>";
+				}
+				}
+				
+				
+				
+						
+				</script>
+				<script src="http://lrn.icstars.org/redball.js"></script>
+		</head>
+			<body>
+				Hello World!
+				<table border="4px;" align= "center">
+				<tr>
+				<td><button onclick="movediagupleft();">Move Diagupleft</button></td>
+				<td><button onclick="moveup();">Move Up</button></td>
+				<td><button onclick="movediagdownleft();">Move DiagDownleft</button></td>
+				<button onclick="x ();">x</button>
+				</tr>
+				<tr>
+				<td><button onclick="moveleft();">Move Left</button></td>
+				<td><button onclick="sayhello();">Eric's Button</button></td>
+				<td><button onclick="moveright();">Move Right</button></td>
+				<button onclick="octagon ();" align= "center">octagon</button>
+				
+				</tr>
+						<img id="redball" src="redball.jpg"/>
+				<tr>
+				<td><button onclick="movediagupright();">Move Diagupright</button></td>
+				<td><button onclick="movedown();">Move Down</button></td>
+				<td><button onclick="movediagdownright();">Move DiagDownright</button></td>
+				
+				</tr>
+				
+				<tr>
+				<td><button onclick="square();">Square</button></td>
+				<td><button onclick="triangle();">triangle</button></td>
+				<td><button onclick="bounce();">bounce</button></td>
+				</tr>
+				
+
+				</table>
+			</body>
+
+	</html>
+
+
