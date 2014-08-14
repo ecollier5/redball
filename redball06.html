@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script>
+
+var hello;
+hello = new mygame;
+
+ 
+function mygame(){
+
+  this.sayhello = function (){
+    console.log ('hello world');
+  };
+  this.addball = function (){ 
+    var E = new letter();
+    var fromServer = '{"cssid":"E","imgsrc":"http://www.efront.com.au/logos/e_Orange_RGB.png"}';
+    jQuery.extend(E, JSON.parse(fromServer));
+    E.debug();
+    E.show();
+    var R = new letter();
+    var fromServer = '{"cssid":"R","imgsrc":"http://www.iconarchive.com/download/i8475/dooffy/characters/R1.ico"}';
+    jQuery.extend(R, JSON.parse(fromServer));
+    R.debug();
+    R.show();
+	var I = new letter();
+    var fromServer = '{"cssid":"I","imgsrc":"http://readfaced.files.wordpress.com/2014/04/i.jpg"}';
+    jQuery.extend(I, JSON.parse(fromServer));
+    I.debug();
+    I.show();
+    var C = new letter();
+    var fromServer = '{"cssid":"C","imgsrc":"http://www.iconarchive.com/download/i8493/dooffy/characters/C1.ico"}';
+    jQuery.extend(C, JSON.parse(fromServer));
+    C.debug();
+    C.show();
+  };
+  
+}
+
+function letter(){
+  var cssid;
+  var imgsrc;
+  this.debug = function (){
+     console.log ('my id is: ' + this.cssid);
+     console.log ('my image source is: ' + this.imgsrc);
+  };
+  this.show = function () {
+    var game = $("#game");
+    game.append("<img id='"+this.cssid+"' src='"+this.imgsrc+"'/>");
+    this.element = $("#" + this.cssid);
+  };
+}
+</script>
+</head>
+<body>
+<button onclick="hello.sayhello();">say it</button>
+<button onclick="hello.addball();">ERIC BUTTON</button>
+<div id="game"></div>
+</body>
+</html>
+
